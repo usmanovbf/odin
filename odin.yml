@@ -34,29 +34,11 @@ staticRules:
 
   # Odin will only delete a stack if it's status is one of the following
   deleteableStatuses:
-    - CREATE_IN_PROGRESS
-    - CREATE_FAILED
     - CREATE_COMPLETE
-    - ROLLBACK_IN_PROGRESS
-    - ROLLBACK_FAILED
     - ROLLBACK_COMPLETE
-    - DELETE_IN_PROGRESS
-    - DELETE_FAILED
-    - DELETE_COMPLETE
-    - UPDATE_IN_PROGRESS
-    - UPDATE_COMPLETE_CLEANUP_IN_PROGRESS
     - UPDATE_COMPLETE
-    - UPDATE_ROLLBACK_IN_PROGRESS
-    - UPDATE_ROLLBACK_FAILED
-    - UPDATE_ROLLBACK_COMPLETE_CLEANUP_IN_PROGRESS
     - UPDATE_ROLLBACK_COMPLETE
-    - REVIEW_IN_PROGRESS
-    - IMPORT_IN_PROGRESS
     - IMPORT_COMPLETE
-    - IMPORT_ROLLBACK_IN_PROGRESS
-    - IMPORT_ROLLBACK_FAILED
-    - IMPORT_ROLLBACK_COMPLETE
-
 
   # A CloudFormation stack won't delete successfully if there are non-empty buckets associated with it.
   # Use this property to indicate whether or not you want Odin to empty all buckets in the stack
@@ -64,7 +46,7 @@ staticRules:
   # and update the bucketsToEmpty property below with the logical resource ids of the buckets you want
   # Odin to empty.
   emptyAllBuckets: true
-  emptyAllBackupVaults: true
+#  emptyAllBackupVaults: true
 
   # Odin will empty buckets with the following CloudFormation logical IDs (if you don't want to empty
   # all buckets)
